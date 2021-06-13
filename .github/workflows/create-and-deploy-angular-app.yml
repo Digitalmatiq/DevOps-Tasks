@@ -18,9 +18,7 @@ jobs:
       - name: install angular CLI
         run: npm install -g @angular/cli
       - name: create angular app
-        run: ng new test_project --skip-install
-      - name: move files from project dir into repo dir
-        run: mv  -v test_project/* .
+        run: ng new test-project --skip-install --directory=. --defaults
       - name: Add, commit, push
         uses: EndBug/add-and-commit@v7 # You can change this to use a specific version
         with:
