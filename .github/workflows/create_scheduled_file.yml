@@ -18,7 +18,7 @@ jobs:
         run: pwd
         
       - name: Create file
-        run: git diff > "diff.txt"
+        run: git diff HEAD > "diff.txt"
         
       - uses: EndBug/add-and-commit@v7
         with:
