@@ -17,11 +17,22 @@ jobs:
       - name: Print Working DIr
         run: pwd
         
-      - name: Get current user
-        run: who
-        
       - name: Create file
         run: echo "testing_this" > "file_should_be_in_DevOps-Tasks.txt"
         
-      - name: Get files
-        run: ls
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          subject: Github Actions job result
+          to: radinoiudamian@gmail.com
+          from: Damian # <user@example.com>
+          secure: true
+          body: Build job of ${{github.repository}} completed successfully!
+          html_body: file://file_should_be_in_DevOps-Tasks.txt
+          ignore_cert: true
+          convert_markdown: true
+          attachments: file_should_be_in_DevOps-Tasks.txt
