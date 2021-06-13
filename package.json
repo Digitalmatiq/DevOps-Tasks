@@ -1,0 +1,24 @@
+{
+  "name": "DevOps-Tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Digitalmatiq/DevOps-Tasks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Digitalmatiq/DevOps-Tasks/issues"
+  },
+  "homepage": "https://github.com/Digitalmatiq/DevOps-Tasks#readme",
+  "dependencies": {
+    "@actions/core": "^1.4.0",
+    "@actions/github": "^5.0.0"
+  }
+}
