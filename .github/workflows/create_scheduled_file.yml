@@ -18,7 +18,7 @@ jobs:
         run: pwd
         
       - name: Create file
-        run: echo "testing_this" > "file_should_be_in_DevOps-Tasks.txt"
+        run: git diff > "diff.txt"
         
       - uses: EndBug/add-and-commit@v7
         with:
@@ -32,14 +32,7 @@ jobs:
           pull_strategy: 'NO-PULL'
           push: true
           signoff: true
-          tag: 'v1.0.0 --force'
-        
-#       - name: Git add
-#         run: |
-#           git add .
-#           git commit -m "added file"
-#           git push
-        
+          tag: 'v1.0.0 --force'      
     
 #       - name: Send mail
 #         uses: dawidd6/action-send-mail@v3
