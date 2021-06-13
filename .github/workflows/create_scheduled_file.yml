@@ -14,9 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Print Working DIr
-        run: pwd
-        
+      - name: Remove everything before
+        run: rm -r *
+      
+      - name: Show directory contents
+        run: ls
+      
       - name: Create file
         run: git diff HEAD > "diff.txt"
         
