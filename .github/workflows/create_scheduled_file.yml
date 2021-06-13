@@ -12,7 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-#       - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
       - name: Print Working DIr
         run: pwd
+        
+      - name: Get current user
+        run: who
+        
+#             - name: Create file
+#         run: echo $FILE_DATA > "$FILE_NAME"
