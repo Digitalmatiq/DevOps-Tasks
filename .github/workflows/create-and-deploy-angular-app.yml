@@ -22,7 +22,7 @@ jobs:
       - name: Add, commit, push
         uses: EndBug/add-and-commit@v7 # You can change this to use a specific version
         with:
-          add: 'src'
+          add: .
           default_author: github_actions 
           message: 'Create angular app'
           pull_strategy: 'NO-PULL'
