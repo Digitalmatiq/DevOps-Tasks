@@ -20,5 +20,8 @@ jobs:
       - name: Get current user
         run: who
         
-#             - name: Create file
-#         run: echo $FILE_DATA > "$FILE_NAME"
+      - name: Create file
+        run: echo "testing_this" > "file_should_be_in_DevOps-Tasks.txt"
+        
+      - name: Get files
+        run: ls
