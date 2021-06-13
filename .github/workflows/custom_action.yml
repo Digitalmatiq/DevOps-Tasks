@@ -15,7 +15,7 @@ jobs:
     
       - name: Hello world action step
         id: hello
-        uses: Digitalmatiq/DevOps-Tasks@v1.0.0
+        uses: Digitalmatiq/DevOps-Tasks@master
         with:
           who-to-greet: 'Myself'
       - name: Get the output time
