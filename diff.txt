@@ -1,7 +1,12 @@
-diff --git a/file_should_be_in_DevOps-Tasks.txt b/file_should_be_in_DevOps-Tasks.txt
-deleted file mode 100644
-index 757fd63..0000000
---- a/file_should_be_in_DevOps-Tasks.txt
-+++ /dev/null
-@@ -1 +0,0 @@
--testing_this
+diff --git a/diff.txt b/diff.txt
+index 1deb3e8..e69de29 100644
+--- a/diff.txt
++++ b/diff.txt
+@@ -1,7 +0,0 @@
+-diff --git a/file_should_be_in_DevOps-Tasks.txt b/file_should_be_in_DevOps-Tasks.txt
+-deleted file mode 100644
+-index 757fd63..0000000
+---- a/file_should_be_in_DevOps-Tasks.txt
+-+++ /dev/null
+-@@ -1 +0,0 @@
+--testing_this
