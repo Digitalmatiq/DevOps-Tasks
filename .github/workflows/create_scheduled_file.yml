@@ -20,11 +20,25 @@ jobs:
       - name: Create file
         run: echo "testing_this" > "file_should_be_in_DevOps-Tasks.txt"
         
-      - name: Git add
-        run: |
-          git add .
-          git commit -m "added file"
-          git push
+      - uses: EndBug/add-and-commit@v7
+        with:
+          # Determines the way the action fills missing author name and email. Three options are available:
+          # - github_actor -> UserName <UserName@users.noreply.github.com>
+          # - user_info -> Your Display Name <your-actual@email.com>
+          # - github_actions -> github-actions <email associated with the github logo>
+          # Default:
+          default_author: github_actor
+          message: 'file uploaded'
+          pull_strategy: 'NO-PULL'
+          push: true
+          signoff: true
+          tag: 'v1.0.0 --force'
+        
+#       - name: Git add
+#         run: |
+#           git add .
+#           git commit -m "added file"
+#           git push
         
     
 #       - name: Send mail
